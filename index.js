@@ -25,7 +25,7 @@ async function run() {
     const packages = jaguar.collection("packages");
     const orders = jaguar.collection("orders");
     const reviews = jaguar.collection("reviews");
-    // post or submit an order
+    // post or submit an order ( by rayhan )
     app.post("/orders", async (req, res) => {
       const order = req.body;
       const result = await orders.insertOne(order);
@@ -94,7 +94,7 @@ async function run() {
       const result = await orders.deleteOne(query);
       res.json(result);
     });
-    // this is for inserting users value to data base
+    // this is for inserting users value to data base 
     app.post("/users", async (req, res) => {
       const user = req.body;
       const result = await users.insertOne(user);
